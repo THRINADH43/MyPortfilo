@@ -1,7 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Thrinadh Manubothu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        #nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+        #nav ul {
+            padding: 0;
+        }
+        #nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        #nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        #nav ul li a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .section {
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+    </style>
 </head>
 <body>
     <div id="nav">
@@ -10,54 +51,68 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Technical Skills</a></li>
-            <li><a href="#volunteer">Volunteer Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
         </ul>
     </div>
 
-    <h2 align="center">Thrinadh Manubothu</h2>
-    <p align="center">Contact: +91-6302319737 | <a href="mailto:m.thrinadhreddy@gmail.com">m.thrinadhreddy@gmail.com</a></p>
-    <p align="center">
-        <a href="https://github.com/THRINADH43" target="_blank">Github</a> |
-        <a href="https://in.linkedin.com/in/thrinadh-manubothu" target="_blank">Linkedin</a>
-    </p>
+    <div class="container">
+        <section id="objective" class="section">
+            <h2>Objective</h2>
+            <p>Passionate information technology graduate seeking to build technology that improves people’s lives. Gained programming expertise through hands-on project development.</p>
+        </section>
 
-    <h3 id="objective">Objective</h3>
-    <p>Passionate information technology graduate seeking to build technology that improves people’s lives. Gained programming expertise through hands-on project development.</p>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <p>R.V.R & J.C College of Engineering - Bachelor of Technology in Information Technology, CGPA: 8.4</p>
+            <p>Narayana Junior College - Intermediate, Percentage: 89.4%</p>
+            <p>Kennedy English Medium High School - 10th Class, CGPA: 9.7</p>
+        </section>
 
-    <h3 id="education">Education</h3>
-    <ul>
-        <li>R.V.R & J.C College of Engineering - Bachelor of Technology in Information Technology, CGPA: 8.4</li>
-        <li>Narayana Junior College - Intermediate, Percentage: 89.4%</li>
-        <li>Kennedy English Medium High School - 10th Class, CGPA: 9.7</li>
-    </ul>
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <p>Machine Learning Intern at PureML (May 2023 – November 2023)</p>
+            <p>Data Science & Business Analytics Intern at The Spark Foundation (May 2022 – June 2022)</p>
+        </section>
 
-    <h3 id="experience">Experience</h3>
-    <ul>
-        <li>Machine Learning Intern at PureML (May 2023 – November 2023)</li>
-        <li>Data Science & Business Analytics Intern at The Spark Foundation (May 2022 – June 2022)</li>
-    </ul>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p>Biometrics with Iris (Jan 2024 – Present)</p>
+            <p>CareerConnect (Dec 2022 – Feb 2023)</p>
+            <p>Q & A Application (Sept 2022 – Nov 2022)</p>
+        </section>
 
-    <h3 id="projects">Projects</h3>
-    <ul>
-        <li>Biometrics with Iris (Jan 2024 – Present)</li>
-        <li>CareerConnect (Dec 2022 – Feb 2023)</li>
-        <li>Q & A Application (Sept 2022 – Nov 2022)</li>
-    </ul>
+        <section id="skills" class="section">
+            <h2>Technical Skills</h2>
+            <p>Languages: Python, Java, SQL (MySQL)</p>
+            <p>Frameworks: Flask</p>
+            <p>API Frameworks: REST</p>
+            <p>Cloud: AWS</p>
+            <p>Developer Tools: Git, Docker, VS Code, PyCharm, IntelliJ</p>
+            <p>Libraries: Pandas, NumPy, Matplotlib, Scikit-learn</p>
+        </section>
 
-    <h3 id="skills">Technical Skills</h3>
-    <ul>
-        <li>Languages: Python, Java, SQL (MySQL)</li>
-        <li>Frameworks: Flask</li>
-        <li>API Frameworks: REST</li>
-        <li>Cloud: AWS</li>
-        <li>Developer Tools: Git, Docker, VS Code, PyCharm, IntelliJ</li>
-        <li>Libraries: Pandas, NumPy, Matplotlib, Scikit-learn</li>
-    </ul>
+        <section id="volunteer" class="section">
+            <h2>Volunteer Experience</h2>
+            <p>Team & Event Management at Informatrix (Nov 2023)</p>
+        </section>
+    </div>
 
-    <h3 id="volunteer">Volunteer Experience</h3>
-    <ul>
-        <li>Team & Event Management at Informatrix (Nov 2023)</li>
-    </ul>
+    <script>
+        // JavaScript for smooth scrolling and other interactive elements
+        document.querySelectorAll('#nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
